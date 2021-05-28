@@ -2,7 +2,6 @@ html {
   background-color: #ECE6DB;
   box-sizing: border-box;
   margin: 0px;
-  padding: 10px;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -22,6 +21,11 @@ html {
   background: #EFEB6B;
 }
 
+section {
+  padding: 150px 10px;
+  position: relative;
+}
+
 h1, p, span, a {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
@@ -33,7 +37,7 @@ h1 {
   font-size: 58px;
   color: #011A59;
   line-height: 1.4;
-  transition: all 0.2s;
+  transition: ease 0.2s;
 }
 
 p {
@@ -42,7 +46,7 @@ p {
   font-weight: 300;
   color: #000000;
   font-size: 20px;
-  transition: all 0.3s;
+  transition: ease 0.2s;
 }
 
 p:nth-of-type(2) {
@@ -54,7 +58,7 @@ span, a {
   color: #011A59;
   font-size: 20px;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: ease 0.2s;
 }
 
 a:hover {
@@ -70,23 +74,26 @@ img {
   z-index: -1;
   position: absolute;
   width: 300px;
-  top: 62%;
-  left: 65%;
-  transition: all 0.2s;
+  bottom: 0;
+  right: 0;
+  transition: ease 0.2s;
 }
 
 /* Responsive design for mobile and tablet */
 
-
 @media screen and (max-width: 667px) {
 
+  section {
+    padding: 5px 10px;
+  }
+
   h1 {
-    max-width: 320px;
-    font-size: 28px;
+    max-width: 350px;
+    font-size: 30px;
   }
 
   p, span, a {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   p {
@@ -94,37 +101,42 @@ img {
   }
 
   p:nth-of-type(2) {
-    max-width: 300px;
+    max-width: 400px;
   }
 
   p:nth-of-type(3)  {
-    max-width: 250px;
+    max-width: 200px;
   }
 
   img {
     width: 140px;
-    top: 75%;
-    left: 62%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 1000px) {
+  
+  section {
+    padding-top: 40px;
   }
 }
 
 @media screen and (max-width: 300px) {
 
+  section {
+    padding: 0px 10px;
+  }
+
   p:nth-of-type(3) {
     max-width: 150px;
   }
-
-  img {
-    top: 75%;
-  }
 }
 
-@media screen and (min-width: 667px) and (max-width: 1024px) {
+@media screen and (min-width: 667px) and (max-width: 1024px) and (orientation: portrait) {
 
-  html {
-    padding: 20px;
+  section {
+    padding: 120px 50px;
   }
-
+  
   h1 {
     max-width: 700px;
     font-size: 42px;
@@ -144,8 +156,6 @@ img {
 
   img {
     width: 250px;
-    top: 62%;
-    left: 62%;
   }
 }
 
